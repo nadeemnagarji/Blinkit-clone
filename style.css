@@ -6,8 +6,12 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto'
+    font-family: 'Roboto';
+   
 }
+
+
+
 .body{
     width: 100vw;
 }
@@ -25,7 +29,9 @@ nav{
     width: 100%;
     overflow-y: hidden;
 }
-
+.phone-nav{
+    display: none;
+}
 nav a {
     color:grey;
 }
@@ -492,6 +498,82 @@ footer p{
    
 }
 
+
+
+/*/////////////////////////Footer section*/
+
+.footer-heading{
+    /* background-color: red; */
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: green; */
+    width: 50%;
+}
+.footer-heading span{
+    color: green;
+}
+
+.footer-container{
+    /* background-color: red; */
+    display: flex;
+
+}
+.footer-left{
+    /* background-color: green; */
+    width: 30%;
+    display: flex;
+   align-items: start;
+   justify-content: space-around;
+   color: grey;
+
+}
+.footer-container{
+    font-size: 1rem;
+    margin-bottom: 5rem;
+}
+.footer-container a {
+    text-decoration: none;
+   font-size: 1.5rem;
+   color: grey;
+}
+.footer-right{
+    /* background-color:yellow ; */
+    display: flex;
+    flex-grow: 1;
+   align-items: center;
+   justify-content: space-around;
+}
+.footer-right div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.trademark-handles {
+    /* background-color: green; */
+    color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+}
+.trademark-handles p{
+    font-size: 1rem;
+}
+.handles{
+   /* background-color: yellow; */
+
+   width: 20%;
+   display: flex;
+   gap: 1rem;
+ justify-content: space-around
+}
+
+
+
 @media screen and (max-width:1350px) {
         .nav-buttons{
             width: 25% ;
@@ -541,32 +623,115 @@ footer p{
     
 }
 @media screen and (max-width:880px){
-    .nav-buttons{
-        width: 25% ;
-        /* background-color: red; */
-        justify-content: space-between;
-    }
-    .login{
-        font-size: 1.6rem;
-    }
-    .location{
-        width: 20%;
-    }
-    .Delivery{
-        font-size: 1.4rem;
-    }
-    .cart{
-        width: 50%;
+    .phone-nav{
         display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem 1rem;
+        align-items: center;
+        /* background-color: red; */
+    }
+    
+    .location {
+        width: 100%;
+        align-self: start;
+        display: flex;
+        /* background-color: red; */
+        align-items: center;
         justify-content: space-between;
+        flex-direction: row;
     }
+    .logo{
+        height: 100%;
+        width: 40%;
+        /* background-color: yellow; */
+    }
+
     .search-space{
-        width: 30%;
+        width: 100%;
+        /* background-color: red; */
     }
-    .cart i {
-        font-size: 1.4rem;
+    .search-space input{
+        width: 90%;
+        height:3.5rem;
     }
-    .cart  button{
-        font-size: 1.5rem;
+    .heroimage{
+        margin-top: 0;
+      height: 200px;
+        width: 100%;
     }
+    .heroimage img{
+        width: 100%;
+        height: 100%;
+    }
+    .offers{
+        height: 200px;
+    }
+    .offer-adds{
+        width: fit-content;
+    }
+    .offer-adds img{
+        width: max-content;
+    }
+    .categories{
+        height: fit-content;
+    }
+    .line1{
+        /* background-color: rgb(18, 39, 160); */
+        width: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5,1fr);
+        /* gap: 1rem; */
+        /* margin-bottom: 2rem; */
+    }
+
+
+.footer-heading{
+  background-color: yellow;
+  width: 100%;
+ display: none;
+}
+.footer-container{
+    /* background-color: red; */
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+}
+.footer-left{
+    justify-content: space-around;
+    /* background-color: yellow; */
+    width: 100%;
+    margin-bottom: 2rem;
+
+}
+.footer-right{
+    /* background-color: red; */
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+   gap: 2rem;
+   height: fit-content;
+   padding: 1rem;
+   
+}
+
+.item:first-child{
+ align-self: self-start;
+}
+.item:nth-child(2){
+    align-items: end;
+    /* background-color: red; */
+}
+
+.item:last-child {
+    grid-row: 2;
+    grid-column: 1 / span 2; /* Span two columns */
+    text-align: center;
+    align-self: center;
+  }
 }
